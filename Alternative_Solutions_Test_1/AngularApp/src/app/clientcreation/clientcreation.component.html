@@ -1,0 +1,26 @@
+<table>
+  <tr>
+    <td>First Name:</td>
+    <td><input type="text" [(ngModel)]="client.firstName" /></td>
+  </tr>
+  <tr>
+    <td>Last Name:</td>
+    <td><input type="text" [(ngModel)]="client.lastName" /></td>
+  </tr>
+  <tr>
+    <td>Height (m):</td>
+    <td><input type="text" [(ngModel)]="client.height" /></td>
+  </tr>
+  <tr>
+    <td>Weight (kg):</td>
+    <td><input type="text" [(ngModel)]="client.weight" /></td>
+  </tr>
+</table>
+
+<button (click)="createClient()">Create</button>
+
+<div *ngIf="message != ''">{{ message }}</div>
+
+<ul *ngIf="clientService.errors.length" style="color: red">
+  <li *ngFor="let error of clientService.errors">{{ error }}</li>
+</ul>

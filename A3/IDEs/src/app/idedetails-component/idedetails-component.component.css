@@ -1,0 +1,21 @@
+.card-body {
+  padding: 60px;
+}
+input,
+textarea {
+  width: 400px;
+}
+
+.err {
+  padding-left: 5px;
+  color: red;
+  cursor: pointer;
+}
+
+img.logo-in-form {
+  height: 100px;
+}
+
+input.ng-invalid.ng-touched {
+  border: 1px solid rgb(204, 12, 5);
+}

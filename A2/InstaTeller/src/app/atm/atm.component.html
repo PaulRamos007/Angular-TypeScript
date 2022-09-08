@@ -1,0 +1,74 @@
+<h2 class="account-type">Choose Account Type</h2>
+
+<div>
+  <input
+    type="radio"
+    name="rdoSavings"
+    checked="true"
+    (change)="isSavings = true"
+    [checked]="this.isSavings"
+  />Savings Account
+
+  <br />
+
+  <input
+    type="radio"
+    name="rdoChequing"
+    (change)="isSavings = false"
+    [checked]="this.isChequing"
+  />Chequing Account
+
+  <br />
+
+  <label for="txtAmount">Amount</label>
+  <br />
+  <input type="text" name="Amount" id="txtAmount" [(ngModel)]="amount" />
+  <br />
+  <br />
+  <input
+    (click)="withdrawalAmount(amount)"
+    type="button"
+    value="withdrawal"
+    id="btnWithdrawal"
+  />
+
+  <input
+    (click)="depositAmount(amount)"
+    type="button"
+    value="deposit"
+    id="btnDeposit"
+  />
+  <br />
+  <label name="error" for="" id="lblError" class="error">
+    {{ this.display }}
+  </label>
+</div>
+
+<div>
+  <h4>Savings Transactions</h4>
+  <div>
+    <div name="Savings" id="txtSavings" class="scrollbar">
+      <div *ngFor="let st of savingsAccount.transactions">
+        {{ st.toString() }}
+      </div>
+    </div>
+  </div>
+  <h4>Current Balance</h4>
+  <label id="lblCurrentSav">
+    {{ this.savingsAccount.getBalance() | currency: "$":"code" }}
+  </label>
+</div>
+<div>
+  <h4>Chequing Transactions</h4>
+  <div class="inside">
+    <div name="Chequing" id="txtChequing" class="scrollbar">
+      <div *ngFor="let ct of chequingAccount.transactions">
+        {{ ct.toString() }}
+      </div>
+    </div>
+  </div>
+  <h4>Current Balance</h4>
+  <label id="lblCurrentBal">
+    {{ this.chequingAccount.getBalance() | currency: "$":"code" }}
+  </label>
+</div>

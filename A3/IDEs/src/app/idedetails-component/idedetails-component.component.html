@@ -1,0 +1,67 @@
+<h2 *ngIf="message" class="text-center red">{{ message }}</h2>
+<div class="card-container">
+  <div class="card">
+    <div class="card-header">Create an IDE</div>
+    <div class="card-body">
+      <!-- SET up form -->
+      <form
+        autocomplete="off"
+        #ideForm="ngForm"
+        (ngSubmit)="onFormSubmit(ideForm)"
+      >
+        <div>
+          <label
+            >Name:<br />
+            <input
+              class="form-control"
+              name="name"
+              #name="ngModel"
+              required
+              [(ngModel)]="ide.name"
+          /></label>
+          <i
+            *ngIf="
+              name?.errors?.required &&
+              ideForm.submitted &&
+              !isValidFormSubmitted
+            "
+            [attr.title]="name?.errors?.required ? 'Name is required' : ''"
+            class="fas fa-exclamation-circle err"
+          ></i>
+        </div>
+        <div>
+          <label
+            >Company:<br />
+            <input class="form-control"
+          /></label>
+          <i class="fas fa-exclamation-circle err"></i>
+        </div>
+        <div class="form-group">
+          <label>Description:</label>
+          <textarea class="form-control"></textarea>
+        </div>
+        <div>
+          <label
+            >Initial Release:<br />
+            <input type="number" class="form-control"
+          /></label>
+          <i class="fas fa-exclamation-circle err"></i>
+        </div>
+        <div>
+          <label
+            >Logo:<br />
+            <input class="form-control"
+          /></label>
+        </div>
+        <! --Show div only of there is an image -->
+        <div class="text-center pt-2">
+          <img src="" class="logo-in-form" alt="" />
+        </div>
+        <div class="pt-2">
+          <button class="btn btn-primary">Save</button>
+        </div>
+      </form>
+      <div>{{ savedMessage }}</div>
+    </div>
+  </div>
+</div>

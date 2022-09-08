@@ -1,0 +1,8 @@
+<div *ngIf="!photoUrl">No foos</div>
+
+<img [src]="photoUrl" />
+
+<br />
+<br />
+
+<button (click)="fetchPhotos()">Fetch new Image</button>

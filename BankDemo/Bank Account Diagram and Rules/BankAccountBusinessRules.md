@@ -1,0 +1,16 @@
+## Specifications
+- Create TypeScripts that contains the specified interface, parent and child classes as per the class diagram
+- Chequing account has the following business rules
+    - Every 5 withdrawals, a transaction fee of $10 is applied to the account. 
+    - Withdrawal count is only incremented upon successful withdrawals
+    - The account cannot be overdrawn. A console message will be displayed to state overdrawn error.
+- Saving account has the following business rules
+    - Every 5 deposits, interest is applied on the balance of the account at a rate of 5%
+    - The account cannot be overdrawn. A console message will be displayed to state overdrawn error.
+- Create a console class that imports the bank account classes and does the following
+    - Creates an instance of a Chequing account and initializes the account with $100
+    - Creates an instance of a Savings account and initializes the account with $1000
+    - Attempt a withdrawal $1100 from the savings account
+    - Attempt to withdrawal $100 from the savings account
+    - Print the savings account balance to the console
+    - Make 5 deposits of $20 to the savings account and print the balance

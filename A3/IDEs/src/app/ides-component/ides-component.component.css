@@ -1,0 +1,15 @@
+input.search-ide {
+  width: 300px;
+  height: 35px;
+  margin-right: 5px;
+  margin-left: 5px;
+  border: 1px solid rgb(149, 149, 149);
+}
+
+.card-body {
+  width: 300px;
+}
+
+img.logo-in-card {
+  height: 100px;
+}

@@ -1,0 +1,15 @@
+"use strict";
+exports.__esModule = true;
+var ContractEmployee_1 = require("./ContractEmployee");
+var FullTimeEmployee_1 = require("./FullTimeEmployee");
+var Fulltime = new FullTimeEmployee_1.FullTimeEmployee("123-456-789", "Ramos", "Paul", "141 Cameron Street", 2, 31);
+var Contract = new ContractEmployee_1.ContractEmployee("123-111-789", "Ramos", "Elisha", "141 Cameron Street", 4, 16);
+var errorEmployee = new FullTimeEmployee_1.FullTimeEmployee("123-0-789", "Ramos", "Abigail", "141 Cameron Street", 12, 1);
+console.log("Valid Employees");
+Fulltime.saveEmployee();
+Contract.saveEmployee();
+console.log(Fulltime.displayInformation());
+console.log(Contract.displayInformation());
+console.log("Invalid Employees");
+errorEmployee.saveEmployee();
+console.log(errorEmployee.displayInformation());

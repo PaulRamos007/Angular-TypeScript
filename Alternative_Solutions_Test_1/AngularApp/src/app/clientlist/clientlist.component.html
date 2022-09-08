@@ -1,0 +1,8 @@
+<div *ngIf="!clients.length">No clients in the system</div>
+
+<ul>
+  <li *ngFor="let client of clients">
+    First Name: {{ client.firstName }} Last Name: {{ client.lastName }} Height:
+    {{ client.height }}m Weight: {{ client.weight }}kg BMI: {{ client.bmi }}
+  </li>
+</ul>

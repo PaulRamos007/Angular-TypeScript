@@ -1,0 +1,38 @@
+<!-- Show the search area if the search phrase has been entered of the ide length is greater than zero>
+<div class="search-container" *ngIf="searchPhrase || ides.length > 0">
+    IDE Company Search: <input type="text" class="search-ide"> <button class="btn btn-primary">Search</button>
+</div>
+
+<h2 class="text-center" *ngIf="message">[message property]</h2>
+
+<!-- show only if the search as been populated and the ide length is zero>
+<div class="text-center"><a class="btn btn-primary" href="/ides">Get all IDEs</a></div>
+
+<!--Show only if the ide length is greater than zero -->
+<div class="card-container">
+  <!-- Iterate through the IDEs to produce the bootstrap cards -->
+  <div class="card m-2">
+    <div class="card-header">
+      <h4>[ IDE Name property ]</h4>
+    </div>
+    <div class="card-body">
+      <h4>
+        [ IDE Name property ] was initially released in [ IDE Initial Release
+        year property ] and maintained by [ IDE company property ]
+      </h4>
+      <!--Only show if there is a description -->
+      <p>
+        About [ IDE Name property ]<br />
+        [ IDE description property ]
+      </p>
+
+      <!-- Show only if there is a logo -->
+      <div class="text-center">
+        <img src="[ IDE logo property]" class="logo-in-card" alt="" />
+      </div>
+
+      <!--Set the link to show the IDEDetail Component for the chosen IDE -->
+      <a class="btn btn-primary mt-2">Details</a>
+    </div>
+  </div>
+</div>

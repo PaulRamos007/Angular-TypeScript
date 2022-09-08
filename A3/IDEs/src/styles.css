@@ -1,0 +1,13 @@
+/* You can add global styles to this file, and also import other style files */
+a,
+a:hover,
+a:visited {
+  text-decoration: none;
+}
+a,
+a:visited {
+  color: grey;
+}
+a:hover {
+  color: rgb(80, 79, 79);
+}
